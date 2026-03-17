@@ -10,11 +10,39 @@ background:#0d1117;
 color:white;
 }
 
+/* Topbar */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b0f14;
+padding:15px 30px;
+border-bottom:1px solid #1f2933;
+}
+
+.page-title{
+font-size:20px;
+color:#1de9b6;
+}
+
+.user-menu{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.avatar{
+width:35px;
+height:35px;
+border-radius:50%;
+}
+
 /* Layout */
 
 .container{
 display:flex;
-height:100vh;
+min-height:100vh;
 }
 
 /* Sidebar */
@@ -44,6 +72,11 @@ cursor:pointer;
 color:#1de9b6;
 }
 
+.sidebar .active{
+color:#1de9b6;
+font-weight:bold;
+}
+
 /* Main */
 
 .main{
@@ -67,7 +100,7 @@ border:none;
 margin-bottom:40px;
 }
 
-/* Hero Cards */
+/* Hero Container */
 
 .hero-container{
 display:flex;
@@ -76,6 +109,8 @@ gap:30px;
 flex-wrap:wrap;
 }
 
+/* Hero Card */
+
 .hero-card{
 background:#1f2933;
 padding:20px;
@@ -83,22 +118,62 @@ width:160px;
 border-radius:10px;
 text-align:center;
 transition:0.3s;
+text-decoration:none;
+color:white;
+position:relative;
 }
 
 .hero-card:hover{
 transform:scale(1.05);
+box-shadow:0 0 20px #00ffc8;
 }
+
+/* Hero Image */
 
 .hero-img{
-width:60px;
-height:60px;
-background:white;
+width:80px;
+height:80px;
 border-radius:50%;
+object-fit:cover;
 margin:0 auto 10px;
+display:block;
+border:3px solid #ffd700;
 }
 
-/* Responsive HP */
-@media (max-width: 768px){
+/* Build Preview (muncul di atas hero) */
+
+.build-preview{
+position:absolute;
+top:-60px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:8px;
+background:#0d1117;
+padding:8px;
+border-radius:10px;
+opacity:0;
+transition:0.3s;
+}
+
+/* Item Bulatan */
+
+.build-preview img{
+width:35px;
+height:35px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* Show build saat hover */
+
+.hero-card:hover .build-preview{
+opacity:1;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
 
 .container{
 flex-direction:column;
@@ -106,7 +181,6 @@ flex-direction:column;
 
 .sidebar{
 width:100%;
-height:auto;
 text-align:center;
 }
 
@@ -124,19 +198,12 @@ margin:5px 10px;
 padding:20px;
 }
 
-.hero-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.search{
+width:80%;
 }
 
 .hero-card{
 width:140px;
-margin:10px;
-}
-
-.search{
-width:80%;
 }
 
 }
