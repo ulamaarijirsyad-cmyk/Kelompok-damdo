@@ -56,8 +56,63 @@ const hero = document.querySelector(".dragging");
 
 if(hero){
 this.appendChild(hero);
+saveTier();
 }
 
 });
 
 });
+
+function saveTier(){
+
+const tiers = document.querySelectorAll(".tier");
+
+let data = [];
+
+tiers.forEach((tier, index) => {
+
+let heroes = tier.querySelectorAll(".hero-card");
+
+let heroNames = [];
+
+heroes.forEach(hero=>{
+heroNames.push(hero.querySelector("h3").textContent);
+});
+
+data[index] = heroNames;
+
+});
+
+localStorage.setItem("tierData", JSON.stringify(data));
+
+}
+
+function loadTier(){
+
+let saved = localStorage.getItem("tierData");
+
+if(!saved) return;
+
+let data = JSON.parse(saved);
+
+const tiers = document.querySelectorAll(".tier");
+
+data.forEach((heroList, index)=>{
+
+heroList.forEach(name=>{
+
+let hero = [...document.querySelectorAll(".hero-card")].find(h=> 
+h.querySelector("h3").textContent === name
+);
+
+if(hero){
+tiers[index].appendChild(hero);
+}
+
+});
+
+});
+
+}
+
+loadTier();
