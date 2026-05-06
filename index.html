@@ -2,553 +2,98 @@
 <html lang="id">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MLBB Item Build Guide</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>MLBB Item Build Guide | Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<!-- Topbar -->
-<div class="topbar">
-  <div class="page-title">Dashboard</div>
-  <div id="navAuth"></div>
-</div>
-
-
-
-<div class="container">
-
-<!-- Sidebar -->
-<div class="sidebar">
-<h2>MLBB</h2>
-
-<ul>
-<li class="active">Dashboard</li>
-<li><a href="hero-tier.html">Hero Tier</a></li>
-<li>Counter Pick</li>
-<li>Draft Master</li>
-<li><a href="marketplace.html">Marketplace</a></li>
-<li><a href="item-build.html">Item Build</a></li>
-
-</ul>
-</div>
-
-<!-- Main -->
-<div class="main">
-
-<h1>Mobile Legends Item Build Guide</h1>
-
-<input 
-type="text"
-id="searchHero"
-class="search"
-placeholder="Search heroes..."
-onkeyup="searchHero()">
-
-<div class="hero-container">
-
-<!-- Aamon -->
-<a href="aamon.html" class="hero-card">
-<img src="images/heroes/aamon.jpg" class="hero-img">
-<h3 class="hero-name">Aamon</h3>
-<p class="role">Assassin</p>
-
-<div class="hero-preview">
-<img src="images/items/arcane_boots.jpg">
-<img src="images/items/genius_wand.png">
-<img src="images/items/holy_crystal.png">
-<img src="images/items/divine_glaive.webp">
-<img src="images/items/feather_of_heaven.jpg">
-<img src="images/items/blood_wings.webp">
-</div>
-</a>
-
-<!-- Akai -->
-<a href="akai.html" class="hero-card">
-<img src="images/heroes/akai.jpg" class="hero-img">
-<h3 class="hero-name">Akai</h3>
-<p class="role">Tank</p>
-
-<div class="hero-preview">
-<img src="images/items/rapid_boots.webp">
-<img src="images/items/Dominance_Ice.webp">
-<img src="images/items/pauldron.png">
-<img src="images/items/guardian_helmet.jpg">
-<img src="images/items/immortality.png">
-<img src="images/items/radiant.jpg">
-</div>
-</a>
-
-<!-- Angela -->
-<a href="angela.html" class="hero-card">
-<img src="images/heroes/angela.png" class="hero-img">
-<h3 class="hero-name">Angela</h3>
-<p class="role">Support</p>
-
-<div class="hero-preview">
-<img src="images/items/magic_shoes.png">
-<img src="images/items/flask.png">
-<img src="images/items/fleeting_time.png">
-<img src="images/items/glowing_wand.png">
-<img src="images/items/holy_crystal.png">
-<img src="images/items/immortality.png">
-</div>
-</a>
-
-<!-- Alucard -->
-<a href="alucard.html" class="hero-card">
-<img src="images/heroes/alucard.jpg" class="hero-img">
-<h3 class="hero-name">Alucard</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/war_axe.jpg">
-<img src="images/items/endless.jpg">
-<img src="images/items/bod.jpg">
-<img src="images/items/queen_wings.jpg">
-<img src="images/items/rose_gold.png">
-</div>
-</a>
-
-<!-- Alice -->
-<a href="alice.html" class="hero-card">
-<img src="images/heroes/alice.jpg" class="hero-img">
-<h3 class="hero-name">Alice</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/magic_shoes.png">
-<img src="images/items/cursed_helmet.jpg">
-<img src="images/items/oracle.jpg">
-<img src="images/items/glowing_wand.png">
-<img src="images/items/brute_force.jpg">
-<img src="images/items/clock_of_destiny.jpg">
-</div>
-</a>
-
-<!-- Alpha -->
-<a href="alpha.html" class="hero-card">
-<img src="images/heroes/alpha.jpg" class="hero-img">
-<h3 class="hero-name">Alpha</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/war_axe.jpg">
-<img src="images/items/skypircer.jpg">
-<img src="images/items/queen_wings.jpg">
-<img src="images/items/bod.jpg">
-<img src="images/items/oracle.jpg">
-</div>
-</a>
-
-<!-- Aldous -->
-<a href="aldous.html" class="hero-card">
-<img src="images/heroes/aldous.jpg" class="hero-img">
-<h3 class="hero-name">Aldous</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/rapid_boots.webp">
-<img src="images/items/heptaseas.png">
-<img src="images/items/endless.jpg">
-<img src="images/items/malefic_roar.jpg">
-<img src="images/items/hunter_strike.png">
-<img src="images/items/rose_gold.png">
-</div>
-</a>
-
-<!-- Argus -->
-<a href="argus.html" class="hero-card">
-<img src="images/heroes/argus.jpg" class="hero-img">
-<h3 class="hero-name">Argus</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/corrosion.png">
-<img src="images/items/windtalker.png">
-<img src="images/items/sea_halbert.png">
-<img src="images/items/has_claw.jpg">
-<img src="images/items/berseker_fury.png">
-<img src="images/items/great_dragon_spear.png">
-</div>
-</a>
-
-<!-- Arlott -->
-<a href="arlott.html" class="hero-card">
-<img src="images/heroes/arlott.jpg" class="hero-img">
-<h3 class="hero-name">Arlott</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/hunter_strike.png">
-<img src="images/items/rose_gold.png">
-<img src="images/items/oracle.jpg">
-<img src="images/items/immortality.png">
-<img src="images/items/quirass.jpg">
-</div>
-</a>
-
-<!-- Atlas -->
-<a href="atlas.html" class="hero-card">
-<img src="images/heroes/atlas.jpg" class="hero-img">
-<h3 class="hero-name">Atlas</h3>
-<p class="role">Tank</p>
-
-<div class="hero-preview">
-<img src="images/items/rapid_boots.webp">
-<img src="images/items/Dominance_Ice.webp">
-<img src="images/items/fleeting_time.png">
-<img src="images/items/quirass.jpg">
-<img src="images/items/athena.png">
-<img src="images/items/immortality.png">
-</div>
-</a>
-
-<!-- Aulus -->
-<a href="aulus.html" class="hero-card">
-<img src="images/heroes/aulus.jpg" class="hero-img">
-<h3 class="hero-name">Aulus</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/corrosion.png">
-<img src="images/items/golden_staff.jpg">
-<img src="images/items/malefic_gun.webp">
-<img src="images/items/sea_halbert.png">
-<img src="images/items/rose_gold.png">
-</div>
-</a>
-
-<!-- Aurora -->
-<a href="aurora.html" class="hero-card">
-<img src="images/heroes/aurora.jpg" class="hero-img">
-<h3 class="hero-name">Aurora</h3>
-<p class="role">Mage</p>
-
-<div class="hero-preview">
-<img src="images/items/arcane_boots.jpg">
-<img src="images/items/glowing_wand.png">
-<img src="images/items/blood_wings.webp">
-<img src="images/items/wishing.webp">
-<img src="images/items/divine_glaive.webp">
-<img src="images/items/holy_crystal.png">
-</div>
-</a>
-
-<!-- Badang -->
-<a href="badang.html" class="hero-card">
-<img src="images/heroes/badang.jpg" class="hero-img">
-<h3 class="hero-name">Badang</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/thunder_belt.jpg">
-<img src="images/items/Dominance_Ice.webp">
-<img src="images/items/brute_force.jpg">
-<img src="images/items/pauldron.png">
-<img src="images/items/oracle.jpg">
-</div>
-</a>
-
-<!-- Balmond -->
-<a href="balmond.html" class="hero-card">
-<img src="images/heroes/balmond.jpg" class="hero-img">
-<h3 class="hero-name">Balmond</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/cursed_helmet.jpg">
-<img src="images/items/war_axe.jpg">
-<img src="images/items/oracle.jpg">
-<img src="images/items/queen_wings.jpg">
-<img src="images/items/guardian_helmet.jpg">
-</div>
-</a>
-
-<!-- Bane -->
-<a href="bane.html" class="hero-card">
-<img src="images/heroes/bane.jpg" class="hero-img">
-<h3 class="hero-name">Bane</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/war_axe.jpg">
-<img src="images/items/endless.jpg">
-<img src="images/items/queen_wings.jpg">
-<img src="images/items/brute_force.jpg">
-<img src="images/items/malefic_roar.jpg">
-
-<img src="images/items/arcane_boots.jpg">
-<img src="images/items/lightning_truncheon.png">
-<img src="images/items/skypircer.jpg"> 
-<img src="images/items/blood_wings.webp">
-<img src="images/items/holy_crystal.png">
-<img src="images/items/divine_glaive.webp">
-</div>
-</a>
-
-<!-- Barats -->
-<a href="barats.html" class="hero-card">
-<img src="images/heroes/barats.jpg" class="hero-img">
-<h3 class="hero-name">Barats</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/war_axe.jpg">
-<img src="images/items/pauldron.png">
-<img src="images/items/brute_force.jpg">
-<img src="images/items/quirass.jpg">
-<img src="images/items/guardian_helmet.jpg">
-</div>
-</a>
-
-<!-- Baxia -->
-<a href="baxia.html" class="hero-card">
-<img src="images/heroes/baxia.jpg" class="hero-img">
-<h3 class="hero-name">Baxia</h3>
-<p class="role">Tank</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/cursed_helmet.jpg">
-<img src="images/items/pauldron.png">
-<img src="images/items/brute_force.jpg">
-<img src="images/items/quirass.jpg">
-<img src="images/items/immortality.png">
-</div>
-</a>
-
-<!-- Betrix -->
-<a href="betrix.html" class="hero-card">
-<img src="images/heroes/beatrix.jpg" class="hero-img">
-<h3 class="hero-name">Betrix</h3>
-<p class="role">Marksman</p>
-
-<div class="hero-preview">
-<img src="images/items/swift_boots.jpg">
-<img src="images/items/bod.jpg">
-<img src="images/items/malefic_gun.webp">
-<img src="images/items/sea_halbert.png">
-<img src="images/items/rose_gold.png">
-<img src="images/items/won.png">
-</div>
-</a>
-
-<!-- Belerick -->
-<a href="belerick.html" class="hero-card">
-<img src="images/heroes/belerick.jpg" class="hero-img">
-<h3 class="hero-name">Belerick</h3>
-<p class="role">Tank</p>
-
-<div class="hero-preview">
-<img src="images/items/rapid_boots.webp">
-<img src="images/items/Dominance_Ice.webp">
-<img src="images/items/quirass.jpg">
-<img src="images/items/pauldron.png">
-<img src="images/items/blade_armor.png">
-<img src="images/items/immortality.png">
-</div>
-</a>
-
-<!-- Benedetta -->
-<a href="benedetta.html" class="hero-card">
-<img src="images/heroes/benedetta.jpg" class="hero-img">
-<h3 class="hero-name">Benedetta</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/rapid_boots.webp">
-<img src="images/items/heptaseas.png">
-<img src="images/items/endless.jpg">
-<img src="images/items/hunter_strike.png">
-<img src="images/items/malefic_roar.jpg">
-<img src="images/items/rose_gold.png">
-</div>
-</a>
-
-<!-- Bruno -->
-<a href="bruno.html" class="hero-card">
-<img src="images/heroes/bruno.jpg" class="hero-img">
-<h3 class="hero-name">Bruno</h3>
-<p class="role">Marksman</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/has_claw.jpg">
-<img src="images/items/berseker_fury.png">
-<img src="images/items/malefic_gun.webp">
-<img src="images/items/windtalker.png">
-<img src="images/items/rose_gold.png">
-</div>
-</a>
-
-<!-- Carmilla -->
-<a href="carmilla.html" class="hero-card">
-<img src="images/heroes/carmilla.jpg" class="hero-img">
-<h3 class="hero-name">Carmilla</h3>
-<p class="role">Tank</p>
-
-<div class="hero-preview">
-<img src="images/items/rapid_boots.webp">
-<img src="images/items/Dominance_Ice.webp">
-<img src="images/items/quirass.jpg">
-<img src="images/items/radiant.jpg">
-<img src="images/items/pauldron.png">
-<img src="images/items/immortality.png">
-</div>
-</a>
-
-<!-- Cecillion -->
-<a href="cecillion.html" class="hero-card">
-<img src="images/heroes/cecilion.jpg" class="hero-img">
-<h3 class="hero-name">Cecillion</h3>
-<p class="role">Mage</p>
-
-<div class="hero-preview">
-<img src="images/items/demon_boots.jpg">
-<img src="images/items/clock_of_destiny.jpg">
-<img src="images/items/glowing_wand.png">
-<img src="images/items/wishing.webp">
-<img src="images/items/divine_glaive.webp">
-<img src="images/items/blood_wings.webp">
-</div>
-</a>
-
-<!-- Change -->
-<a href="change.html" class="hero-card">
-<img src="images/heroes/change.jpg" class="hero-img">
-<h3 class="hero-name">Change</h3>
-<p class="role">Mage</p>
-
-<div class="hero-preview">
-<img src="images/items/arcane_boots.jpg">
-<img src="images/items/genius_wand.png">
-<img src="images/items/holy_crystal.png">
-<img src="images/items/lightning_truncheon.png">
-<img src="images/items/divine_glaive.webp">
-<img src="images/items/blood_wings.webp">
-</div>
-</a>
-
-<!-- Chip -->
-<a href="chip.html" class="hero-card">
-<img src="images/heroes/chip.jpg" class="hero-img">
-<h3 class="hero-name">Chip</h3>
-<p class="role">Tank</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/fleeting_time.png">
-<img src="images/items/Dominance_Ice.webp">
-<img src="images/items/pauldron.png">
-<img src="images/items/immortality.png">
-<img src="images/items/radiant.jpg">
-</div>
-</a>
-
-<!-- Chou -->
-<a href="chou.html" class="hero-card">
-<img src="images/heroes/chou.jpg" class="hero-img">
-<h3 class="hero-name">Chou</h3>
-<p class="role">Fighter/Tank</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/heptaseas.png">
-<img src="images/items/endless.jpg">
-<img src="images/items/bod.jpg">
-<img src="images/items/malefic_roar.jpg">
-<img src="images/items/hunter_strike.png">
-
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/Dominance_Ice.webp">
-<img src="images/items/quirass.jpg">
-<img src="images/items/pauldron.png">
-<img src="images/items/brute_force.jpg">
-<img src="images/items/immortality.png">
-</div>
-</a>
-
-<!-- Cici -->
-<a href="cici.html" class="hero-card">
-<img src="images/heroes/cici.jpg" class="hero-img">
-<h3 class="hero-name">Cici</h3>
-<p class="role">Fighter</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/war_axe.jpg">
-<img src="images/items/brute_force.jpg">
-<img src="images/items/hunter_strike.png">
-<img src="images/items/oracle.jpg">
-<img src="images/items/malefic_roar.jpg">
-</div>
-</a>
-
-<!-- Claude -->
-<a href="claude.html" class="hero-card">
-<img src="images/heroes/claude.jpg" class="hero-img">
-<h3 class="hero-name">Claude</h3>
-<p class="role">Marksman</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/dhs.jpg">
-<img src="images/items/golden_staff.jpg">
-<img src="images/items/corrosion.png">
-<img src="images/items/rose_gold.png">
-<img src="images/items/malefic_roar.jpg">
-</div>
-</a>
-
-<!-- Clint -->
-<a href="clint.html" class="hero-card">
-<img src="images/heroes/clint.webp" class="hero-img">
-<h3 class="hero-name">Clint</h3>
-<p class="role">Marksman</p>
-
-<div class="hero-preview">
-<img src="images/items/tough_boots.jpg">
-<img src="images/items/heptaseas.png">
-<img src="images/items/endless.jpg">
-<img src="images/items/skypircer.jpg">
-<img src="images/items/rose_gold.png">
-<img src="images/items/malefic_gun.webp">
-</div>
-</a>
-
-<!-- Cyclops -->
-<a href="cyclops.html" class="hero-card">
-<img src="images/heroes/cyclops.jpg" class="hero-img">
-<h3 class="hero-name">Cyclops</h3>
-<p class="role">Mage</p>
-
-<div class="hero-preview">
-<img src="images/items/magic_shoes.png">
-<img src="images/items/buku.jpg">
-<img src="images/items/glowing_wand.png">
-<img src="images/items/energy.jpg">
-<img src="images/items/divine_glaive.webp">
-<img src="images/items/wishing.webp">
-</div>
-</a>
-
-
-</div>
-</div>
-</div>
-
-<script type="module" src="script.js"></script>
-
+  <div class="topbar">
+    <div class="page-title">Dashboard</div>
+    <div id="navAuth"></div>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <h2>MLBB</h2>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li><a href="hero-tier.html">Hero Tier</a></li>
+        <li>Counter Pick</li>
+        <li>Draft Master</li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+        <li><a href="item-build.html">Item Build</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="welcome-box">
+        <div class="welcome-badge"><i class="fas fa-chart-line"></i> META INSIGHTS</div>
+        <h1>Welcome to <span class="highlight">mlbb.guide</span></h1>
+        <p class="welcome-desc">Your ultimate resource for Mobile Legends: Bang Bang — real-time draft recommendations, hero guides, and marketplace.</p>
+        <div class="patch-stats">
+          <span><i class="fas fa-calendar-alt"></i> Patch 1.9.44</span>
+          <span><i class="fas fa-database"></i> Data based on Mythic+</span>
+        </div>
+      </div>
+      <div class="tools-header">
+        <h3><i class="fas fa-chart-pie"></i> Tools & Analytics</h3>
+        <div class="live-badge"><i class="fas fa-circle" style="font-size: 10px; color: #10b981;"></i> Live</div>
+      </div>
+      <div class="analytics-grid">
+        <div class="analytics-card">
+          <div class="card-icon"><i class="fas fa-feather-alt"></i></div>
+          <div class="card-body">
+            <h4>Fanny · Assassin</h4>
+            <div class="winrate">56.0%</div>
+            <div class="trend positive"><i class="fas fa-arrow-up"></i> +2.3% this week</div>
+            <div class="meta-detail">Pick 18.2% | Ban 64%</div>
+            <a href="#" class="explore-link">Explore →</a>
+          </div>
+        </div>
+        <div class="analytics-card">
+          <div class="card-icon"><i class="fas fa-dragon"></i></div>
+          <div class="card-body">
+            <h4>Yu Zhong · Fighter</h4>
+            <div class="winrate">55.5%</div>
+            <div class="trend positive"><i class="fas fa-arrow-up"></i> +1.7% last 7d</div>
+            <div class="meta-detail">Pick 15.4% | EXP Lane</div>
+            <a href="#" class="explore-link">Explore →</a>
+          </div>
+        </div>
+        <div class="analytics-card">
+          <div class="card-icon"><i class="fas fa-skull"></i></div>
+          <div class="card-body">
+            <h4>Ling · Assassin</h4>
+            <div class="winrate">55.2%</div>
+            <div class="trend neutral"><i class="fas fa-minus"></i> Stable since patch</div>
+            <div class="meta-detail">Pick 12.7% | Jungle main</div>
+            <a href="#" class="explore-link">Explore →</a>
+          </div>
+        </div>
+      </div>
+      <div class="extra-meta">
+        <div class="trending-items">
+          <h4><i class="fas fa-fire"></i> Trending Core Items</h4>
+          <div class="items-list">
+            <div class="item-chip"><span class="item-icon">⚔️</span> War Axe</div>
+            <div class="item-chip"><span class="item-icon">🏹</span> Hunter Strike</div>
+            <div class="item-chip"><span class="item-icon">🔮</span> Genius Wand</div>
+          </div>
+        </div>
+        <div class="top-wr">
+          <h4><i class="fas fa-chart-line"></i> Highest WR (Mythic)</h4>
+          <ul class="wr-list">
+            <li><span>1. Fanny</span> <span class="percent">56.0%</span></li>
+            <li><span>2. Yu Zhong</span> <span class="percent">55.5%</span></li>
+            <li><span>3. Ling</span> <span class="percent">55.2%</span></li>
+            <li><span>4. Irithel</span> <span class="percent">54.8%</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
 </body>
+
 </html>

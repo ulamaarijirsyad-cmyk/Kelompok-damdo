@@ -2,197 +2,315 @@
 <html lang="id">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hero Tier List</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Legends Hero Tier List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="main">
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="page-title">Hero Tier List</div>
+    <div id="navAuth"></div>
+  </div>
 
-<h1>Hero Tier List</h1>
+  <div class="container">
 
-<div class="tier-row">
-<div class="tier-label s">S</div>
-<div class="tier"></div>
-</div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>MLBB</h2>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li class="active">Hero Tier</li>
+        <li>Counter Pick</li>
+        <li>Draft Master</li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+        <li><a href="item-build.html">Item Build</a></li>
+      </ul>
+    </div>
 
-<div class="tier-row">
-<div class="tier-label a">A</div>
-<div class="tier"></div>
-</div>
+    <!-- Main Content - Tier List dengan Gambar -->
+    <div class="main tierlist-modern">
+      <div class="tier-header">
+        <h1><i class="fas fa-trophy"></i> Mobile Legends Hero Tier List</h1>
+        <p class="tier-sub">Discover the current meta rankings. Filter by role and lane to find the best picks for your playstyle.</p>
+        <div class="update-info">
+          <i class="fas fa-sync-alt"></i> Tier list last updated: 5 May 2026 at 21:00
+        </div>
+      </div>
 
-<div class="tier-row">
-<div class="tier-label b">B</div>
-<div class="tier"></div>
-</div>
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <div class="filter-group">
+          <span class="filter-label"><i class="fas fa-filter"></i> Filter by Role</span>
+          <div class="filter-buttons" id="roleFilter">
+            <button class="filter-chip active" data-role="all">All</button>
+            <button class="filter-chip" data-role="Tank">Tank</button>
+            <button class="filter-chip" data-role="Fighter">Fighter</button>
+            <button class="filter-chip" data-role="Assassin">Assassin</button>
+            <button class="filter-chip" data-role="Mage">Mage</button>
+            <button class="filter-chip" data-role="Marksman">Marksman</button>
+            <button class="filter-chip" data-role="Support">Support</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label"><i class="fas fa-map-marker-alt"></i> Filter by Lane</span>
+          <div class="filter-buttons" id="laneFilter">
+            <button class="filter-chip active" data-lane="all">All</button>
+            <button class="filter-chip" data-lane="Gold Lane">Gold Lane</button>
+            <button class="filter-chip" data-lane="Exp Lane">Exp Lane</button>
+            <button class="filter-chip" data-lane="Mid Lane">Mid Lane</button>
+            <button class="filter-chip" data-lane="Roam">Roam</button>
+            <button class="filter-chip" data-lane="Jungle">Jungle</button>
+          </div>
+        </div>
+      </div>
 
-<div class="tier-row">
-<div class="tier-label c">C</div>
-<div class="tier"></div>
-</div>
+      <!-- Tier S+ -->
+      <div class="tier-block tier-ss">
+        <div class="tier-head">
+          <span class="tier-badge ss">S+</span>
+          <span class="tier-desc">God-tier picks that define the meta</span>
+        </div>
+        <div class="tier-heroes" data-tier="S+">
+          <!-- Data hero: nama, role, lane -->
+        </div>
+      </div>
 
-<div class="tier-row">
-<div class="tier-label d">D</div>
-<div class="tier"></div>
-</div>
+      <!-- Tier S -->
+      <div class="tier-block tier-s">
+        <div class="tier-head">
+          <span class="tier-badge s">S</span>
+          <span class="tier-desc">Top-tier picks that dominate the meta</span>
+        </div>
+        <div class="tier-heroes" data-tier="S"></div>
+      </div>
 
+      <!-- Tier A -->
+      <div class="tier-block tier-a">
+        <div class="tier-head">
+          <span class="tier-badge a">A</span>
+          <span class="tier-desc">Strong heroes that consistently perform well</span>
+        </div>
+        <div class="tier-heroes" data-tier="A"></div>
+      </div>
 
-<h2>Hero Pool</h2>
+      <!-- Tier B -->
+      <div class="tier-block tier-b">
+        <div class="tier-head">
+          <span class="tier-badge b">B</span>
+          <span class="tier-desc">Balanced heroes with situational strengths</span>
+        </div>
+        <div class="tier-heroes" data-tier="B"></div>
+      </div>
 
-<h3 class="hero-letter"></h3>
-<div class="hero-pool">
+      <!-- Tier C -->
+      <div class="tier-block tier-c">
+        <div class="tier-head">
+          <span class="tier-badge c">C</span>
+          <span class="tier-desc">Viable picks that may need team coordination</span>
+        </div>
+        <div class="tier-heroes" data-tier="C"></div>
+      </div>
 
-<div class="hero-card">
-<img src="images/heroes/aamon.jpg">
-<h3>Aamon</h3>
-</div>
+      <!-- Underperforming -->
+      <div class="underperforming">
+        <div class="underperforming-header">
+          <i class="fas fa-exclamation-triangle"></i> Currently underperforming heroes
+        </div>
+        <div class="underperforming-list"></div>
+      </div>
+    </div>
+  </div>
 
-<div class="hero-card">
-<img src="images/heroes/akai.jpg">
-<h3>Akai</h3>
-</div>
+  <script>
+    // Data hero lengkap
+    const heroesData = {
+      "S+": [
+        { name: "Harley", role: "Mage", lane: "Mid Lane" },
+        { name: "Gloo", role: "Tank", lane: "Roam" },
+        { name: "Sora", role: "Assassin", lane: "Jungle" },
+        { name: "Marcel", role: "Fighter", lane: "Exp Lane" }
+      ],
+      "S": [
+        { name: "Guinevere", role: "Fighter", lane: "Exp Lane" },
+        { name: "Freya", role: "Fighter", lane: "Exp Lane" },
+        { name: "Zhuxin", role: "Mage", lane: "Mid Lane" },
+        { name: "Suyou", role: "Fighter", lane: "Jungle" },
+        { name: "Helcurt", role: "Assassin", lane: "Jungle" },
+        { name: "Sun", role: "Fighter", lane: "Exp Lane" },
+        { name: "Estes", role: "Support", lane: "Roam" },
+        { name: "Zetian", role: "Mage", lane: "Mid Lane" },
+        { name: "Minsithtar", role: "Marksman", lane: "Gold Lane" },
+        { name: "Hilda", role: "Fighter", lane: "Exp Lane" }
+      ],
+      "A": [
+        { name: "Yi Sun-shin", role: "Marksman", lane: "Gold Lane" },
+        { name: "Fredrinn", role: "Tank", lane: "Jungle" },
+        { name: "Floryn", role: "Support", lane: "Roam" },
+        { name: "Gusion", role: "Assassin", lane: "Jungle" },
+        { name: "Harith", role: "Mage", lane: "Mid Lane" },
+        { name: "Alice", role: "Fighter", lane: "Exp Lane" },
+        { name: "Kadita", role: "Mage", lane: "Mid Lane" },
+        { name: "Kaja", role: "Support", lane: "Roam" },
+        { name: "Karrie", role: "Marksman", lane: "Gold Lane" },
+        { name: "Leomord", role: "Fighter", lane: "Exp Lane" },
+        { name: "Aulus", role: "Fighter", lane: "Exp Lane" },
+        { name: "Hanabi", role: "Marksman", lane: "Gold Lane" }
+      ],
+      "B": [
+        { name: "Diggie", role: "Support", lane: "Roam" },
+        { name: "Saber", role: "Assassin", lane: "Jungle" },
+        { name: "Angela", role: "Support", lane: "Roam" },
+        { name: "Grock", role: "Tank", lane: "Roam" },
+        { name: "Lesley", role: "Marksman", lane: "Gold Lane" },
+        { name: "Aamon", role: "Assassin", lane: "Jungle" },
+        { name: "Franco", role: "Tank", lane: "Roam" },
+        { name: "Tigreal", role: "Tank", lane: "Roam" },
+        { name: "Minotaur", role: "Tank", lane: "Roam" },
+        { name: "Miya", role: "Marksman", lane: "Gold Lane" }
+      ],
+      "C": [
+        { name: "Phoveus", role: "Fighter", lane: "Exp Lane" }, { name: "Valir", role: "Mage", lane: "Mid Lane" },
+        { name: "Hayabusa", role: "Assassin", lane: "Jungle" }, { name: "Obsidia", role: "Assassin", lane: "Jungle" },
+        { name: "Masha", role: "Fighter", lane: "Exp Lane" }, { name: "Belerick", role: "Tank", lane: "Exp Lane" },
+        { name: "Khufra", role: "Tank", lane: "Roam" }, { name: "Badang", role: "Fighter/Tank", lane: "Exp Lane" },
+        { name: "Silvanna", role: "Support", lane: "Roam" }, { name: "Julian", role: "Fighter", lane: "Jungle" },
+        { name: "Hanzo", role: "Assassin", lane: "Jungle" }, { name: "Gord", role: "Mage", lane: "Mid Lane" },
+        { name: "X.Borg", role: "Fighter", lane: "Exp Lane" }, { name: "Akai", role: "Tank", lane: "Roam" },
+        { name: "Benedetta", role: "Assassin", lane: "Jungle" }, { name: "Thamuz", role: "Fighter", lane: "Exp Lane" },
+        { name: "Khaleed", role: "Fighter", lane: "Exp Lane" }, { name: "Lolita", role: "Tank", lane: "Roam" },
+        { name: "Terizla", role: "Fighter", lane: "Exp Lane" }, { name: "Yu Zhong", role: "Fighter", lane: "Exp Lane" },
+        { name: "Fanny", role: "Assassin", lane: "Jungle" }, { name: "Odette", role: "Mage", lane: "Mid Lane" },
+        { name: "Melissa", role: "Marksman", lane: "Gold Lane" }, { name: "Ixia", role: "Marksman", lane: "Gold Lane" },
+        { name: "Selena", role: "Assassin", lane: "Jungle" }, { name: "Natalia", role: "Assassin", lane: "Jungle" },
+        { name: "Moskov", role: "Marksman", lane: "Gold Lane" }, { name: "Uranus", role: "Tank", lane: "Roam" },
+        { name: "Vexana", role: "Mage", lane: "Mid Lane" }, { name: "Clint", role: "Marksman", lane: "Gold Lane" },
+        { name: "Rafaela", role: "Support", lane: "Roam" }, { name: "Natan", role: "Marksman", lane: "Gold Lane" },
+        { name: "Atlas", role: "Tank", lane: "Roam" }, { name: "Lukas", role: "Fighter", lane: "Exp Lane" },
+        { name: "Beatrix", role: "Marksman", lane: "Gold Lane" }, { name: "Kagura", role: "Mage", lane: "Mid Lane" },
+        { name: "Johnson", role: "Tank", lane: "Roam" }, { name: "Argus", role: "Fighter", lane: "Exp Lane" },
+        { name: "Eudora", role: "Mage", lane: "Mid Lane" }, { name: "Carmilla", role: "Tank", lane: "Roam" },
+        { name: "Irithel", role: "Marksman", lane: "Gold Lane" }, { name: "Ruby", role: "Fighter", lane: "Exp Lane" },
+        { name: "Brody", role: "Marksman", lane: "Gold Lane" }, { name: "Nana", role: "Mage", lane: "Mid Lane" }
+      ],
+      "underperforming": [
+        { name: "Claude", role: "Marksman", lane: "Gold Lane" }, { name: "Kimmy", role: "Marksman", lane: "Gold Lane" },
+        { name: "Cyclops", role: "Mage", lane: "Mid Lane" }, { name: "Baxia", role: "Tank", lane: "Roam" },
+        { name: "Faramis", role: "Support", lane: "Roam" }, { name: "Alucard", role: "Fighter", lane: "Exp Lane" },
+        { name: "Yve", role: "Mage", lane: "Mid Lane" }, { name: "Joy", role: "Assassin", lane: "Jungle" },
+        { name: "Granger", role: "Marksman", lane: "Gold Lane" }, { name: "Zhask", role: "Mage", lane: "Mid Lane" },
+        { name: "Popol and Kupa", role: "Marksman", lane: "Gold Lane" }, { name: "Novaria", role: "Mage", lane: "Mid Lane" },
+        { name: "Dyrroth", role: "Fighter", lane: "Exp Lane" }, { name: "Arlott", role: "Fighter", lane: "Exp Lane" },
+        { name: "Lapu-Lapu", role: "Fighter", lane: "Exp Lane" }, { name: "Lylia", role: "Mage", lane: "Mid Lane" },
+        { name: "Kalea", role: "Fighter", lane: "Exp Lane" }, { name: "Vale", role: "Mage", lane: "Mid Lane" },
+        { name: "Bane", role: "Fighter", lane: "Exp Lane" }, { name: "Edith", role: "Tank", lane: "Roam" },
+        { name: "Chou", role: "Fighter", lane: "Exp Lane" }, { name: "Cecilion", role: "Mage", lane: "Mid Lane" },
+        { name: "Xavier", role: "Mage", lane: "Mid Lane" }, { name: "Lunox", role: "Mage", lane: "Mid Lane" },
+        { name: "Cici", role: "Fighter", lane: "Exp Lane" }, { name: "Chang'e", role: "Mage", lane: "Mid Lane" },
+        { name: "Hylos", role: "Tank", lane: "Roam" }, { name: "Barats", role: "Tank", lane: "Roam" },
+        { name: "Pharsa", role: "Mage", lane: "Mid Lane" }, { name: "Nolan", role: "Assassin", lane: "Jungle" },
+        { name: "Jawhead", role: "Fighter", lane: "Exp Lane" }, { name: "Karina", role: "Assassin", lane: "Jungle" },
+        { name: "Wanwan", role: "Marksman", lane: "Gold Lane" }, { name: "Bruno", role: "Marksman", lane: "Gold Lane" },
+        { name: "Martis", role: "Fighter", lane: "Exp Lane" }, { name: "Aurora", role: "Mage", lane: "Mid Lane" },
+        { name: "Paquito", role: "Fighter", lane: "Exp Lane" }, { name: "Gatotkaca", role: "Tank", lane: "Roam" },
+        { name: "Zilong", role: "Fighter", lane: "Exp Lane" }, { name: "Roger", role: "Fighter", lane: "Exp Lane" },
+        { name: "Valentina", role: "Mage", lane: "Mid Lane" }, { name: "Luo Yi", role: "Mage", lane: "Mid Lane" },
+        { name: "Alpha", role: "Fighter", lane: "Exp Lane" }, { name: "Lancelot", role: "Assassin", lane: "Jungle" },
+        { name: "Ling", role: "Assassin", lane: "Jungle" }, { name: "Esmeralda", role: "Fighter", lane: "Exp Lane" },
+        { name: "Mathilda", role: "Support", lane: "Roam" }, { name: "Balmond", role: "Fighter", lane: "Exp Lane" }
+      ]
+    };
 
-<div class="hero-card">
-<img src="images/heroes/angela.png">
-<h3>Angela</h3>
-</div>
+    // Helper: konversi nama hero ke filename gambar
+    function getHeroImageName(heroName) {
+      let name = heroName.toLowerCase();
+      // Special cases
+      if (name === "yi sun-shin") return "yi_sun_shin.jpg";
+      if (name === "popol and kupa") return "popol_and_kupa.jpg";
+      if (name === "x.borg") return "xborg.jpg";
+      // Ganti spasi dengan underscore
+      name = name.replace(/\s+/g, '_');
+      name = name.replace(/-/g, '_');
+      return name + ".jpg";
+    }
 
-<div class="hero-card">
-<img src="images/heroes/alucard.jpg">
-<h3>Alucard</h3>
-</div>
+    // Buat elemen hero dengan gambar
+    function createHeroElement(hero) {
+      const div = document.createElement('div');
+      div.className = 'hero-tier-item';
+      div.setAttribute('data-role', hero.role);
+      div.setAttribute('data-lane', hero.lane);
+      div.setAttribute('data-name', hero.name.toLowerCase());
+      
+      const imgSrc = `images/heroes/${getHeroImageName(hero.name)}`;
+      div.innerHTML = `
+        <img src="${imgSrc}" alt="${hero.name}" onerror="this.src='https://placehold.co/70x70/1f2933/1de9b6?text=${hero.name.charAt(0)}'">
+        <span class="hero-name">${hero.name}</span>
+        <small class="hero-role">${hero.role}</small>
+      `;
+      return div;
+    }
 
-<div class="hero-card">
-<img src="images/heroes/alice.jpg">
-<h3>Alice</h3>
-</div>
+    // Render semua tier
+    function renderTier(containerId, heroesList) {
+      const container = document.querySelector(`.tier-heroes[data-tier="${containerId}"]`);
+      if (!container) return;
+      container.innerHTML = '';
+      heroesList.forEach(hero => {
+        container.appendChild(createHeroElement(hero));
+      });
+    }
 
-<div class="hero-card">
-<img src="images/heroes/alpha.jpg">
-<h3>Alpha</h3>
-</div>
+    renderTier('S+', heroesData["S+"]);
+    renderTier('S', heroesData["S"]);
+    renderTier('A', heroesData["A"]);
+    renderTier('B', heroesData["B"]);
+    renderTier('C', heroesData["C"]);
 
-<div class="hero-card">
-<img src="images/heroes/aldous.jpg">
-<h3>Aldous</h3>
-</div>
+    // Underperforming
+    const underperformingContainer = document.querySelector('.underperforming-list');
+    heroesData.underperforming.forEach(hero => {
+      underperformingContainer.appendChild(createHeroElement(hero));
+    });
 
-<div class="hero-card">
-<img src="images/heroes/argus.jpg">
-<h3>Argus</h3>
-</div>
+    // Filter logic
+    let activeRole = 'all';
+    let activeLane = 'all';
 
-<div class="hero-card">
-<img src="images/heroes/arlott.jpg">
-<h3>Arlott</h3>
-</div>
+    function updateFilters() {
+      const items = document.querySelectorAll('.hero-tier-item');
+      items.forEach(item => {
+        const role = item.getAttribute('data-role');
+        const lane = item.getAttribute('data-lane');
+        const roleMatch = activeRole === 'all' || role === activeRole;
+        const laneMatch = activeLane === 'all' || lane === activeLane;
+        item.style.display = (roleMatch && laneMatch) ? 'flex' : 'none';
+      });
+    }
 
-<div class="hero-card">
-<img src="images/heroes/atlas.jpg">
-<h3>Atlas</h3>
-</div>
+    document.querySelectorAll('#roleFilter .filter-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#roleFilter .filter-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeRole = btn.getAttribute('data-role');
+        updateFilters();
+      });
+    });
 
-<div class="hero-card">
-<img src="images/heroes/aulus.jpg">
-<h3>Aulus</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/aurora.jpg">
-<h3>Aurora</h3>
-</div>
-
-</div>
-
-<h3 class="hero-letter"></h3>
-<div class="hero-pool">
-
-<div class="hero-card">
-<img src="images/heroes/badang.jpg">
-<h3>Badang</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/balmond.jpg">
-<h3>Balmond</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/barats.jpg">
-<h3>Barats</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/baxia.jpg">
-<h3>Baxia</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/beatrix.jpg">
-<h3>Beatrix</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/belerick.jpg">
-<h3>Belerick</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/benedetta.jpg">
-<h3>Benedetta</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/brody.jpg">
-<h3>Brody</h3>
-</div>
-
-</div>
-
-<h3 class="hero-letter"></h3>
-<div class="hero-pool">
-
-<div class="hero-card">
-<img src="images/heroes/cecilion.jpg">
-<h3>Cecilion</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/carmilla.jpg">
-<h3>Carmilla</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/change.jpg">
-<h3>Chang'e</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/chou.jpg">
-<h3>Chou</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/claude.jpg">
-<h3>Claude</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/clint.jpg">
-<h3>Clint</h3>
-</div>
-
-<div class="hero-card">
-<img src="images/heroes/cyclops.jpg">
-<h3>Cyclops</h3>
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
+    document.querySelectorAll('#laneFilter .filter-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#laneFilter .filter-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeLane = btn.getAttribute('data-lane');
+        updateFilters();
+      });
+    });
+  </script>
+  <script type="module" src="script.js"></script>
 </body>
+
 </html>

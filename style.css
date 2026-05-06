@@ -475,3 +475,427 @@ padding:4px;
   color:#00ffc8;
 }
 
+
+/* ========== TAMBAHAN CSS UNTUK DASHBOARD ========== */
+
+/* Welcome Box */
+.welcome-box {
+  background: #0f1419;
+  border-radius: 24px;
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  border: 1px solid #1f2a3e;
+  text-align: left;
+}
+.welcome-badge {
+  display: inline-block;
+  background: #1de9b620;
+  color: #1de9b6;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.welcome-box h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: white;
+}
+.highlight {
+  color: #1de9b6;
+}
+.welcome-desc {
+  color: #b9c3cf;
+  line-height: 1.5;
+  max-width: 80%;
+  margin-bottom: 18px;
+}
+.patch-stats {
+  display: flex;
+  gap: 24px;
+  font-size: 0.85rem;
+  color: #8e9aaf;
+}
+.patch-stats i {
+  margin-right: 6px;
+  color: #1de9b6;
+}
+
+/* Tools Header */
+.tools-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.tools-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #eef2ff;
+  margin: 0;
+}
+.live-badge {
+  background: #1f2a3e;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e6;
+}
+
+/* Analytics Grid (3 kartu) */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.analytics-card {
+  background: #0f1419;
+  border-radius: 24px;
+  border: 1px solid #232e3c;
+  padding: 20px;
+  display: flex;
+  gap: 18px;
+  transition: 0.2s;
+  text-align: left;
+}
+.analytics-card:hover {
+  transform: translateY(-4px);
+  border-color: #1de9b6;
+}
+.card-icon {
+  font-size: 2.2rem;
+  background: #1de9b610;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  color: #1de9b6;
+}
+.card-body h4 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #eef2ff;
+}
+.winrate {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1de9b6;
+}
+.trend {
+  font-size: 0.75rem;
+  margin: 6px 0;
+}
+.trend.positive {
+  color: #4cd964;
+}
+.trend.neutral {
+  color: #ffaa33;
+}
+.meta-detail {
+  font-size: 0.7rem;
+  color: #8e9aaf;
+  margin: 8px 0 12px;
+}
+.explore-link {
+  color: #1de9b6;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.explore-link:hover {
+  gap: 8px;
+  text-decoration: underline;
+}
+
+/* Extra Meta (Trending Items + Highest WR) */
+.extra-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #0a0e12;
+  border-radius: 24px;
+  padding: 24px 30px;
+  border: 1px solid #1e2a36;
+  margin-top: 8px;
+}
+.trending-items, .top-wr {
+  flex: 1;
+  min-width: 180px;
+}
+.trending-items h4, .top-wr h4 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: #cbd5e6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.item-chip {
+  background: #1f2a36;
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  color: #eef2ff;
+  border: 1px solid #2d3b48;
+}
+.item-chip:hover {
+  background: #1de9b620;
+  border-color: #1de9b6;
+}
+.wr-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.wr-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #1e2a36;
+  color: #cfdee9;
+}
+.percent {
+  color: #1de9b6;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-desc {
+    max-width: 100%;
+  }
+  .analytics-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .extra-meta {
+    flex-direction: column;
+  }
+}
+
+
+
+/* ========== HERO TIER LIST DENGAN GAMBAR ========== */
+
+.tierlist-modern {
+  text-align: left;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+
+.tier-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #1de9b6;
+}
+
+.tier-sub {
+  color: #b9c3cf;
+  margin-bottom: 12px;
+}
+
+.update-info {
+  font-size: 13px;
+  color: #8e9aaf;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Filter Section */
+.filter-section {
+  background: #0f1419;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #1f2a3e;
+}
+
+.filter-group {
+  margin-bottom: 15px;
+}
+
+.filter-label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #cbd5e6;
+  margin-bottom: 10px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-chip {
+  background: #1f2933;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 30px;
+  color: #cfd8dc;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 13px;
+}
+
+.filter-chip.active {
+  background: #1de9b6;
+  color: #0d1117;
+}
+
+.filter-chip:hover:not(.active) {
+  background: #2a3a48;
+}
+
+/* Tier Blocks */
+.tier-block {
+  background: #0f1419;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #1f2a3e;
+  overflow: hidden;
+}
+
+.tier-head {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tier-badge {
+  font-size: 24px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 40px;
+  background: #1f2933;
+  color: white;
+}
+
+.tier-badge.ss { background: #ff4d4d; box-shadow: 0 0 8px #ff4d4d; }
+.tier-badge.s { background: #ff944d; }
+.tier-badge.a { background: #ffd24d; color: #1a1a1a; }
+.tier-badge.b { background: #6fdc6f; color: #1a1a1a; }
+.tier-badge.c { background: #4da6ff; }
+
+.tier-desc {
+  color: #8e9aaf;
+  font-size: 13px;
+}
+
+.tier-heroes, .underperforming-list {
+  padding: 16px 20px;
+  border-top: 1px solid #1f2a3e;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Hero Item dengan Gambar */
+.hero-tier-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1f2933;
+  border-radius: 16px;
+  padding: 12px 8px;
+  width: 85px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.hero-tier-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  border-color: #1de9b6;
+}
+
+.hero-tier-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1de9b6;
+  background: #0f1419;
+  margin-bottom: 8px;
+}
+
+.hero-tier-item .hero-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #eef2ff;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.hero-tier-item .hero-role {
+  font-size: 10px;
+  color: #1de9b6;
+  background: #0b1220;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-top: 4px;
+}
+
+/* Underperforming Section */
+.underperforming {
+  background: #0f1419;
+  border-radius: 20px;
+  margin-top: 30px;
+  border: 1px solid #c53030;
+}
+
+.underperforming-header {
+  background: #c5303010;
+  padding: 12px 20px;
+  border-bottom: 1px solid #c53030;
+  color: #fc8181;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tierlist-modern {
+    padding: 20px;
+  }
+  .tier-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-tier-item {
+    width: 70px;
+    padding: 8px 4px;
+  }
+  .hero-tier-item img {
+    width: 50px;
+    height: 50px;
+  }
+  .hero-tier-item .hero-name {
+    font-size: 10px;
+  }
+}
+
+
+
